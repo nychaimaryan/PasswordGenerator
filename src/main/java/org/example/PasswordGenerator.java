@@ -14,6 +14,17 @@ public class PasswordGenerator {
     private static final String ALL_CHARS = UPPER + LOWER + DIGITS + SPECIAL;
     private static final SecureRandom random = new SecureRandom();
 
+    public static void printPasswordRequirements() {
+        System.out.println("=== Вимоги до сильного пароля ===");
+        System.out.println("- Мінімум 12 символів");
+        System.out.println("- Великі літери (A–Z)");
+        System.out.println("- Малі літери (a–z)");
+        System.out.println("- Цифри (0–9)");
+        System.out.println("- Спеціальні символи (!@#$%^&*...)");
+        System.out.println("==================================");
+    }
+
+
     public static String generatePassword(int length) {
         if (length < 8) {
             throw new IllegalArgumentException("Пароль повинен бути не менше 8 символів.");
