@@ -26,7 +26,7 @@ public class PasswordGenerator {
 
 
     public static String generatePassword(int length) {
-        if (length < 8) {
+            if (length < 8) {
             throw new IllegalArgumentException("Пароль повинен бути не менше 8 символів.");
         }
 
